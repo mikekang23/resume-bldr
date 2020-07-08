@@ -1,21 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import Nav from './nav/index';
+import CreateYourResume from './CreateYourResume'
+import Home from './Home';
 
 class App extends React.Component {
   render(){
     return (
-      <main role="main">
+      <Router>
         <Nav></Nav>
-        <div className="jumbotron text-center">
-          <div className="container col-md-6">
-            <h1 className="jumbotron-heading">Less is More.</h1>
-            <p className="lead text-muted">The average recruiter spends just 6 seconds on scanning your resumé. Let's keep it simple, informative, and interactive.</p>
-          <a href="/create-your-resume" className="btn btn-primary">Build Your Resumé</a>
-
-          </div>
-        </div>
-      </main>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/create-your-resume">
+            <CreateYourResume />
+          </Route>
+        </Switch>
+      </Router>
     )
   }
 }
