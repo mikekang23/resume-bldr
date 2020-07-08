@@ -10,11 +10,11 @@ class Nav extends React.Component {
       <div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
         <h5 className="my-0 mr-md-auto font-weight-normal"><Link to="/">merely.io</Link></h5>
         <nav className="my-2 my-md-0 mr-md-3">
-          <a className="p-2 text-dark" href="/about">About</a>
-          <a className="p-2 text-dark" href="/create-your-resume">Create Your Resumé</a>
-          <a className="p-2 text-dark" href="/login">Sign In</a>
+          <Link className="p-2 text-dark" to="/about">About</Link>
+          <Link className="p-2 text-dark" to="/create-your-resume">Create Your Resumé</Link>
+          <Link className="p-2 text-dark" to="/login">Sign In</Link>
         </nav>
-        <a className="btn btn-outline-primary" href="/register">Sign up</a>
+        <Link className="btn btn-outline-primary" to="/register">Sign up</Link>
       </div>
     )
   }

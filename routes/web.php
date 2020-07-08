@@ -12,8 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::any('/{any}', 'HomeController@index')->where('any', '.*');
 // Auth::routes();
-Route::get('/', 'HomeController@index')->name('home');
+// Route::get('/', 'HomeController@index')->name('home');
 //
 // Route::resource('/resume', 'ResumeController');
 //
